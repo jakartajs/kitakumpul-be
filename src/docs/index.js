@@ -26,6 +26,15 @@ module.exports = (router) => {
         title: docTitle,
         version: docVersion,
       },
+      securityDefinitions: {
+        ApiKeyAuth: {
+          type: 'apiKey',
+          name: 'Authorization',
+          scheme: 'bearer',
+          description: 'get Authorization from userApi key login',
+          in: 'header',
+        }
+      }
     },
     apis: [
       './src/controllers/*.js',
