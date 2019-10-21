@@ -1,7 +1,7 @@
 # Kita Kumpul Backend
 
 ## Backend Requirement
-1. PostgresSql database
+1. Mysql database
 2. nodejs
 
 ## How to run 
