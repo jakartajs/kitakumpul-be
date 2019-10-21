@@ -8,7 +8,7 @@ const DB_HOST = env.DATABASE_HOST || 'localhost';
 const DB_PORT = env.DATABASE_PORT || 5432;
 const DB_NAME = env.DATABASE_NAME || 'dbname';
 
-const DB_STRING = `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`;
+const DB_STRING = `mysql://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`;
 
 
 module.exports = {
