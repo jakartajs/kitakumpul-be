@@ -28,7 +28,7 @@ module.exports = (router) => {
       },
     },
     apis: [
-      './controllers/*.js',
+      './src/controllers/*.js',
     ],
   });
 
