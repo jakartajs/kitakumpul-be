@@ -1,0 +1,19 @@
+require('dotenv').config();
+const path = require('path');
+const { env } = process;
+
+const DB_USER = env.DATABASE_USER || 'dbuser';
+const DB_PASSWORD = env.DATABASE_PASSWORD || 'dbpass';
+const DB_HOST = env.DATABASE_HOST || 'localhost';
+const DB_PORT = env.DATABASE_PORT || 5432;
+const DB_NAME = env.DATABASE_NAME || 'dbname';
+
+const DB_STRING = `mysql://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`;
+
+
+module.exports = {
+  "url": DB_STRING,
+  "models-path": path.resolve('./src/models'),
+  "seeders-path": path.resolve('./src/seeders'),
+  "migrations-path": path.resolve('./src/migrations')
+};
